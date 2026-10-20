@@ -14,8 +14,8 @@ jobs:
         uses: actions/github-script@v7
         env:
           PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
-          PROJECT_NUMBER: ${{ vars.PROJECT_NUMBER }}
-          PROJECT_OWNER: ${{ vars.PROJECT_OWNER }}
+          PROJECT_NUMBER: ${{ vars.PROJECT_NUMBER || '4' }}
+          PROJECT_OWNER: ${{ vars.PROJECT_OWNER || 'ogw07222-tech' }}
         with:
           github-token: ${{ secrets.PROJECTS_TOKEN || github.token }}
           script: |
